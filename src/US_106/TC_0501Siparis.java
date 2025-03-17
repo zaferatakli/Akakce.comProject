@@ -12,7 +12,7 @@ public class TC_0501Siparis extends BaseDriver {
      * <pre>
      * Bu Code AKAKÇE PROJE US_105 için yazılmıştır.
      * Sipariş listesi kontrolü amaçlıdır.
-     * 1- AKAKÇE sayfasına <a href="https://www.akakce.com">...</a> giriş yapılır.
+     * 1- AKAKÇE sayfasına <a href="https://www.akakce.com">https://www.akakce.com</a> giriş yapılır.
      * 2- Giriş yapılır.
      * 3- Hesabım sayfasına gidilir.
      * 4- Siparişlerim sayfasına gidilir.
@@ -25,8 +25,7 @@ public class TC_0501Siparis extends BaseDriver {
         driver.navigate().to("https://www.akakce.com/");
         //Sayfa kontrolü,
         Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/", driver.getCurrentUrl());
-        if (driver.getCurrentUrl().equals("https://www.akakce.com/"))
-            System.out.println("AKAKÇE doğru şekilde yüklendi.");
+        System.out.println("AKAKÇE doğru şekilde yüklendi.");
         MyFunc.sleep(1);
 
         // Giriş Butonuna CLİCK
@@ -36,8 +35,7 @@ public class TC_0501Siparis extends BaseDriver {
         MyFunc.sleep(1);
         // Giriş sayfası kontrolü.
         Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/akakcem/giris/", driver.getCurrentUrl());
-        if (driver.getCurrentUrl().equals("https://www.akakce.com/akakcem/giris/"))
-            System.out.println("GİRİŞ sayfası yüklendi.");
+        System.out.println("GİRİŞ sayfası yüklendi.");
         MyFunc.sleep(1);
 
         // E-posta girişi
@@ -45,8 +43,7 @@ public class TC_0501Siparis extends BaseDriver {
         epostaKutusu.sendKeys("fosan56532@bankrau.com");
         // E-posta giriş kontrolü
         Assert.assertEquals("E-POSTA girilemedi", "fosan56532@bankrau.com", epostaKutusu.getAttribute("value"));
-        if (epostaKutusu.getAttribute("value").equals("fosan56532@bankrau.com"))
-            System.out.println("E-POSTA duğru şekilde girildi.");
+        System.out.println("E-POSTA duğru şekilde girildi.");
         MyFunc.sleep(1);
 
         // Şifre girişi
@@ -61,8 +58,7 @@ public class TC_0501Siparis extends BaseDriver {
         System.out.println("GİRİŞ butonu CLICK");
         MyFunc.sleep(1);
         Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/", driver.getCurrentUrl());
-        if (driver.getCurrentUrl().equals("https://www.akakce.com/"))
-            System.out.println("ANA SAYFA doğru şekilde yüklendi.");
+        System.out.println("ANA SAYFA doğru şekilde yüklendi.");
         MyFunc.sleep(1);
 
         // Hesap CLICK
@@ -72,8 +68,7 @@ public class TC_0501Siparis extends BaseDriver {
         MyFunc.sleep(1);
         // Hesabım sayfası giriş sayfası kontrolü.
         Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/akakcem/", driver.getCurrentUrl());
-        if (driver.getCurrentUrl().equals("https://www.akakce.com/akakcem/"))
-            System.out.println("HESABIM sayfası yüklendi.");
+        System.out.println("HESABIM sayfası yüklendi.");
         MyFunc.sleep(1);
 
         // Siparişlerim CLICK
@@ -83,15 +78,13 @@ public class TC_0501Siparis extends BaseDriver {
         MyFunc.sleep(1);
         // Hesabım sayfası giriş sayfası kontrolü.
         Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/akakcem/siparislerim/", driver.getCurrentUrl());
-        if (driver.getCurrentUrl().equals("https://www.akakce.com/akakcem/siparislerim/"))
-            System.out.println("SİPARİŞLERİM sayfası yüklendi.");
+        System.out.println("SİPARİŞLERİM sayfası yüklendi.");
         MyFunc.sleep(1);
 
         // Sipariş kontrol
         WebElement kontrol = driver.findElement(By.cssSelector("div[id='user-order-info'] div"));
         Assert.assertTrue("Aranılan mesaj bulunamadı", kontrol.getText().contains("Kayıtlı siparişiniz bulunmuyor."));
-        if (kontrol.getText().equals("Kayıtlı siparişiniz bulunmuyor."))
-            System.out.println("Sipariş olmadığı doğrulandı.");
+        System.out.println("Sipariş olmadığı doğrulandı.");
 
         WaitAndClose();
     }

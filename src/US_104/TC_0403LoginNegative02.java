@@ -8,9 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0403LoginNegative02 extends BaseDriver {
-    /**Bu Test Senaryosu, geçersiz bir e-posta adresiyle oturum açma girişiminin reddedildiğini test etmek için hazırlanmıştır.
-        This Test Scenario is prepared to test that the login attempt with an invalid email address is rejected.
-     */
+        /**
+         * Bu Test Senaryosu, geçersiz bir e-posta adresiyle oturum açma girişiminin reddedildiğini test etmek için hazırlanmıştır.
+         * This Test Scenario is prepared to test that the login attempt with an invalid email address is rejected.
+         */
     @Test
     public void TC_0403LoginTest() {
         driver.navigate().to("https://www.akakce.com/");

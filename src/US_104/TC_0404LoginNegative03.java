@@ -8,9 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0404LoginNegative03 extends BaseDriver {
-    /**Bu Test Senaryosu, boş (NULL) e-posta ve şifre ile oturum açma girişiminin başarısız olduğunu doğrulamak için hazırlanmıştır.
-        This Test Scenario is prepared to verify that the login attempt with a null (empty) email and password fails.
-     */
+        /**
+         * Bu Test Senaryosu, boş (NULL) e-posta ve şifre ile oturum açma girişiminin başarısız olduğunu doğrulamak için hazırlanmıştır.
+         * This Test Scenario is prepared to verify that the login attempt with a null (empty) email and password fails.
+         */
     @Test
     public void TC_0404LoginTest() {
         driver.navigate().to("https://www.akakce.com/");

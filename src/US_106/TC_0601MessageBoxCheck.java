@@ -7,10 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0601MessageBoxCheck extends BaseDriver {
-/*
-Bu test senaryosunda akakce.com sitesine gidilerek login işlemi yapılır ve
-login işlemi sonrası profil sayfasına gidilirek mesaj kutusu kontrolü sağlanır.
- */
+        /**
+         * Bu test senaryosunda akakce.com sitesine gidilerek login işlemi yapılır ve
+         * login işlemi sonrası profil sayfasına gidilirek mesaj kutusu kontrolü sağlanır.
+         * In this test scenario, the login process is performed by navigating to the akakce.com website.
+         * After logging in, the profile page is accessed, and the message box is checked.
+         */
     @Test
     public void mesajKutusuKontrolü() {
         driver.get("https://www.akakce.com/");

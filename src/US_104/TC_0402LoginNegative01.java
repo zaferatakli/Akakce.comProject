@@ -28,13 +28,13 @@ public class TC_0402LoginNegative01 extends BaseDriver {
         testEmail.sendKeys("cigeyab754@erapk.com");
         Assert.assertEquals("E-posta adresi girilemedi.", "cigeyab754@erapk.com", testEmail.getAttribute("value"));
         System.out.println("E-posta adresi girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement incorrectPassword = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(6) input"));
         incorrectPassword.sendKeys("HataliSifre123");
         Assert.assertEquals("Şifre girilemedi.", "HataliSifre123", incorrectPassword.getAttribute("value"));
         System.out.println("Gecersiz Şifre girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement loginButton = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(10)"));
         loginButton.click();

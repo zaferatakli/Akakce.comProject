@@ -28,18 +28,18 @@ public class TC_0401LoginPositive extends BaseDriver {
         testEmail.sendKeys("cigeyab754@erapk.com");
         Assert.assertEquals("E-posta adresi girilemedi.", "cigeyab754@erapk.com", testEmail.getAttribute("value"));
         System.out.println("E-posta adresi girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement testPassword = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(6) input"));
         testPassword.sendKeys("Tz12345678.");
         Assert.assertEquals("Şifre girilemedi.", "Tz12345678.", testPassword.getAttribute("value"));
         System.out.println("Şifre girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement loginButton = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(10)"));
         loginButton.click();
         System.out.println("Giriş yap butonuna tıklandı.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement account = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
         Assert.assertEquals("Oturum açılamadı.", "TestName", account.getText());

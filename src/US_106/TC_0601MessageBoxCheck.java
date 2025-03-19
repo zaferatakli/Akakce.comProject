@@ -27,22 +27,22 @@ public class TC_0601MessageBoxCheck extends BaseDriver {
         WebElement email = driver.findElement(By.cssSelector("div[id='L_h_v8']>h2+form>span>input"));
         email.sendKeys("noxomo9201@erapk.com");
         System.out.println("Email girildi");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement password = driver.findElement(By.cssSelector("div[id='L_h_v8']>h2+form>span+label+span>input"));
         password.sendKeys("Test12345");
         System.out.println("Şifre girildi");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement loginBtn = driver.findElement(By.cssSelector("div[id='L_h_v8']>h2+form>span+label+span+span+label+a+input"));
         loginBtn.click();
         System.out.println("Login butonuna tıklandı");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement profile = driver.findElement(By.cssSelector("div[class='g-3_v8 hm_hp_v8']>span+div>i"));
         profile.click();
         System.out.println("Profil sayfasına gidildi");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement messageButton = driver.findElement(By.cssSelector("div[class='wbb_v8']>span+div+span+ul>li>b+a+a"));
         messageButton.click();
@@ -50,8 +50,6 @@ public class TC_0601MessageBoxCheck extends BaseDriver {
         MyFunc.sleep(2);
 
         WebElement message = driver.findElement(By.cssSelector("div[id='C4w']>style+div>p"));
-        MyFunc.sleep(2);
-
         Assert.assertTrue("Mesaj kutusu açılmadı...", message.getText().contains("Listelenecek mesaj bulunamadı."));
         System.out.println("Mesaj kutusu kontrolü başarılı");
 

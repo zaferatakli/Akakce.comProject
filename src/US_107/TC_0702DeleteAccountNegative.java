@@ -21,6 +21,7 @@ public class TC_0702DeleteAccountNegative extends BaseDriver {
     public void TC_0702DeleteAccountNegativeTest() {
         driver.get("https://www.akakce.com/");
         System.out.println("Akakce.com sitesine gidildi.");
+        MyFunc.sleep(2);
 
         WebElement loginButton = driver.findElement(By.cssSelector("div[id='H_rl_v8']>:nth-child(2)"));
         loginButton.click();
@@ -30,12 +31,12 @@ public class TC_0702DeleteAccountNegative extends BaseDriver {
         WebElement email = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span>input"));
         email.sendKeys("akakce128@gmail.com");
         System.out.println("Email adresi girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement password = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span+label+span>input"));
         password.sendKeys("Abcd.1234");
         System.out.println("Sifre girildi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement login = driver.findElement(By.cssSelector("#lfb"));
         login.click();
@@ -45,12 +46,12 @@ public class TC_0702DeleteAccountNegative extends BaseDriver {
         WebElement userButton = driver.findElement(By.cssSelector("div[id='HM_v8'] :nth-child(2)"));
         userButton.click();
         System.out.println("Kullanici butonuna tiklandi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement myAccountButton = driver.findElement(By.cssSelector(" li[id='HM_p_v8'] +li+li+li+li>a"));
         myAccountButton.click();
         System.out.println("Hesabim butonuna tiklandi.");
-        MyFunc.sleep(2);
+        MyFunc.sleep(1);
 
         WebElement deleteMyAccountButton = driver.findElement(By.cssSelector("ul[id='AL'] :nth-child(5)"));
         deleteMyAccountButton.click();

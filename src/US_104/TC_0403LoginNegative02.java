@@ -24,9 +24,9 @@ public class TC_0403LoginNegative02 extends BaseDriver {
         System.out.println("Giriş yap butonuna tıklandı.");
         MyFunc.sleep(2);
 
-        WebElement fakeEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
-        fakeEmail.sendKeys("hatali@email.com");
-        Assert.assertEquals("Hatali e-posta adresi girilemedi.", "hatali@email.com", fakeEmail.getAttribute("value"));
+        WebElement incorrectEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
+        incorrectEmail.sendKeys("hatali@email.com");
+        Assert.assertEquals("Hatali e-posta adresi girilemedi.", "hatali@email.com", incorrectEmail.getAttribute("value"));
         System.out.println("Gecersiz e-posta adresi girildi.");
         MyFunc.sleep(2);
 

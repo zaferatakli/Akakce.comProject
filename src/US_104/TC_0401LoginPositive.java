@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0401LoginPositive extends BaseDriver {
-        /**
-         * Bu Test Senaryosu, kullanıcının başarılı bir şekilde oturum açmasını test etmek için hazırlanmıştır.
-         * This Test Scenario is prepared to test the successful login of the user.
-         */
+        /**<pre>
+         * --> Bu Test Senaryosu, kullanıcının başarılı bir şekilde oturum açmasını test etmek için hazırlanmıştır.
+         *
+         * --> This Test Scenario is prepared to test the successful login of the user.</pre>*/
     @Test
     public void TC_0401LoginTest() {
         driver.navigate().to("https://www.akakce.com/");

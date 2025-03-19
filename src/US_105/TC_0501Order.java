@@ -8,12 +8,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_0501Order extends BaseDriver {
-        /**
-         * Bu test senaryosunda akakce.com sitesine gidilerek login işlemi yapılır ve
-         * login işlemi sonrası profil sayfasına gidilerek sipariş listesi kontrol edilir.
-         * In this test scenario, the login process is performed by navigating to the akakce.com website.
-         * After logging in, the profile page is accessed, and the order list is checked.
-         */
+        /**<pre>
+         * --> Bu test senaryosunda akakce.com sitesine gidilerek login işlemi yapılır ve login işlemi sonrası profil
+         * sayfasına gidilerek sipariş listesi kontrol edilir.
+         *
+         * --> In this test scenario, the login process is performed by navigating to the akakce.com website.After logging in,
+         * the profile page is accessed, and the order list is checked.</pre>*/
     @Test
     public void TC_0501OrderTest() {
         //AKAKÇE sayfasına yönlendirildi.

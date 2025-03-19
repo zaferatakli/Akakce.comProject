@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TC_101Account extends BaseDriver {
-    /**
-     * Bu senaryoda sitede doğru bilgiler girilerek hesap açma senaryosu sağlanmıştır.
-     * In this scenario, the account opening scenario was provided by entering the correct information on the site.
-     */
+    /**<pre>
+     * --> Bu senaryoda sitede doğru bilgiler girilerek hesap açma senaryosu sağlanmıştır.
+     *
+     * --> In this scenario, the account opening scenario was provided by entering the correct information on the site.</pre>*/
     @Test
     public void TC_0101AccountTest() {
         driver.navigate().to("https://www.akakce.com/");

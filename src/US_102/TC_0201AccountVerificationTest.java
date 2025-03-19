@@ -9,6 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class TC_0201AccountVerificationTest extends BaseDriver {
+    /**<pre>
+     * --> Bu test senaryosunda kullanıcı adı ve şifre ile giriş yaparak hesap bilgilerine erişim sağlanmaktadır.
+     *
+     * --> In this test scenario, access to the account information is provided by logging in with the user name and password.</pre>*/
     @Test
     public void accountVerification() {
         driver.navigate().to("https://www.akakce.com/");

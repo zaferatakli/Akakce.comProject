@@ -6,10 +6,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 public class TC_102Account extends BaseDriver {
-    /**
-     * Bu senaryoda soyadı kısmı boş bırakılarak hata mesajı alınması sağlanmıştır.
-     * In this scenario, the surname section was left blank, resulting in an error message.
-     */
+    /**<pre>
+     * --> Bu senaryoda soyadı kısmı boş bırakılarak hata mesajı alınması sağlanmıştır.
+     *
+     * --> In this scenario, the surname section was left blank, resulting in an error message.</pre>*/
     @Test
     public void TC_0102AccountTest() {
         driver.navigate().to("https://www.akakce.com/");

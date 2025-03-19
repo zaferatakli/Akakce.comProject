@@ -1,4 +1,4 @@
-package US_104;
+package US_102;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -6,14 +6,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
-public class TC_0401LoginPositive extends BaseDriver {
-        /**
-         * Bu Test Senaryosu, kullanıcının başarılı bir şekilde oturum açmasını test etmek için hazırlanmıştır.
-         * This Test Scenario is prepared to test the successful login of the user.
-         */
+public class TC_0201AccountVerificationTest extends BaseDriver {
     @Test
-    public void TC_0401LoginTest() {
+    public void accountVerification() {
         driver.navigate().to("https://www.akakce.com/");
         Assert.assertEquals("Web sitesine erisim saglanamadi.", "https://www.akakce.com/", driver.getCurrentUrl());
         System.out.println("Anasayfaya başarılı bir şekilde ulaşıldı.");
@@ -44,6 +41,11 @@ public class TC_0401LoginPositive extends BaseDriver {
         WebElement account = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
         Assert.assertEquals("Oturum açılamadı.", "TestName", account.getText());
         System.out.println("Oturum başarılı bir şekilde açıldı.");
+        Actions actions=new Actions(driver);
+        actions.moveToElement(account).perform();
+        MyFunc.sleep(2);
+        Assert.assertEquals("Hesap bilgilerine erişilemedi.","TestName",driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a")).getText());
+        System.out.println("Hesap bilgilerine başarılı bir şekilde erişildi.");
 
         WaitAndClose();
     }

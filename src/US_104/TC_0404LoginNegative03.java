@@ -25,15 +25,15 @@ public class TC_0404LoginNegative03 extends BaseDriver {
         System.out.println("Giriş yap butonuna tıklandı.");
         MyFunc.sleep(2);
 
-        WebElement fakeEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
-        fakeEmail.sendKeys("");
-        Assert.assertEquals("E-posta adresi girilemedi.", "", fakeEmail.getAttribute("value"));
+        WebElement testEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
+        testEmail.sendKeys("");
+        Assert.assertEquals("E-posta adresi girilemedi.", "", testEmail.getAttribute("value"));
         System.out.println("E-posta adresi alani bos birakildi.");
         MyFunc.sleep(2);
 
-        WebElement fakePassword = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(6) input"));
-        fakePassword.sendKeys("");
-        Assert.assertEquals("Şifre girilemedi.", "", fakePassword.getAttribute("value"));
+        WebElement testPassword = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(6) input"));
+        testPassword.sendKeys("");
+        Assert.assertEquals("Şifre girilemedi.", "", testPassword.getAttribute("value"));
         System.out.println("Şifre alani bos birakildi.");
         MyFunc.sleep(2);
 

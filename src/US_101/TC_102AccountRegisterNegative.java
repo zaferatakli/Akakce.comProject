@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-public class TC_102Account extends BaseDriver {
+public class TC_102AccountRegisterNegative extends BaseDriver {
     /**<pre>
      * --> Bu senaryoda soyadı kısmı boş bırakılarak hata mesajı alınması sağlanmıştır.
      *
@@ -18,7 +18,7 @@ public class TC_102Account extends BaseDriver {
         System.out.println("Akakçe sayfasına girildi");
 
         WebElement signUp = driver.findElement(By.cssSelector("[id='H_st_v8'] + div >:nth-child(1)"));
-        Assert.assertEquals("Yanlış sayfaya girldi", "https://www.akakce.com/", driver.getCurrentUrl());
+        Assert.assertEquals("Yanlış sayfaya girildi", "https://www.akakce.com/", driver.getCurrentUrl());
         System.out.println("Hesap aç görüntülendi");
         signUp.click();
         MyFunc.sleep(2);

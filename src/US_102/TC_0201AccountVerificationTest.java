@@ -9,10 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class TC_0201AccountVerificationTest extends BaseDriver {
-    /**<pre>
+    /**
+     * <pre>
      * --> Bu test senaryosunda kullanıcı adı ve şifre ile giriş yaparak hesap bilgilerine erişim sağlanmaktadır.
      *
-     * --> In this test scenario, access to the account information is provided by logging in with the user name and password.</pre>*/
+     * --> In this test scenario, access to the account information is provided by logging in with the user name and password.</pre>
+     */
     @Test
     public void accountVerification() {
         driver.navigate().to("https://www.akakce.com/");
@@ -23,6 +25,11 @@ public class TC_0201AccountVerificationTest extends BaseDriver {
         WebElement login = driver.findElement(By.cssSelector("div[id='H_rl_v8'] :nth-child(2)"));
         login.click();
         System.out.println("Giriş yap butonuna tıklandı.");
+        MyFunc.sleep(2);
+
+        WebElement loginPageCheck = driver.findElement(By.cssSelector("#FrmLi > label:nth-child(3)"));
+        Assert.assertEquals("Giriş sayfasına erişilemedi.", "Eposta", loginPageCheck.getText());
+        System.out.println("Giriş sayfasına başarılı bir şekilde ulaşıldı.");
         MyFunc.sleep(2);
 
         WebElement testEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
@@ -42,13 +49,13 @@ public class TC_0201AccountVerificationTest extends BaseDriver {
         System.out.println("Giriş yap butonuna tıklandı.");
         MyFunc.sleep(1);
 
-        WebElement account = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
-        Assert.assertEquals("Oturum açılamadı.", "TestName", account.getText());
+        WebElement accountCheck = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
+        Assert.assertEquals("Oturum açılamadı.", "TestName", accountCheck.getText());
         System.out.println("Oturum başarılı bir şekilde açıldı.");
-        Actions actions=new Actions(driver);
-        actions.moveToElement(account).perform();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(accountCheck).perform();
         MyFunc.sleep(2);
-        Assert.assertEquals("Hesap bilgilerine erişilemedi.","TestName",driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a")).getText());
+        Assert.assertEquals("Hesap bilgilerine erişilemedi.", "TestName", driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a")).getText());
         System.out.println("Hesap bilgilerine başarılı bir şekilde erişildi.");
 
         WaitAndClose();

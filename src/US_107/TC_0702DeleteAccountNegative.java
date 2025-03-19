@@ -23,8 +23,8 @@ public class TC_0702DeleteAccountNegative extends BaseDriver {
         System.out.println("Akakce.com sitesine gidildi.");
         MyFunc.sleep(2);
 
-        WebElement loginButton = driver.findElement(By.cssSelector("div[id='H_rl_v8']>:nth-child(2)"));
-        loginButton.click();
+        WebElement login = driver.findElement(By.cssSelector("div[id='H_rl_v8']>:nth-child(2)"));
+        login.click();
         MyFunc.sleep(2);
         System.out.println("Login butonuna tiklandi.");
 
@@ -38,18 +38,22 @@ public class TC_0702DeleteAccountNegative extends BaseDriver {
         System.out.println("Sifre girildi.");
         MyFunc.sleep(1);
 
-        WebElement login = driver.findElement(By.cssSelector("#lfb"));
-        login.click();
+        WebElement loginButton = driver.findElement(By.cssSelector("#lfb"));
+        loginButton.click();
         System.out.println("Login butonuna tiklandi.");
         MyFunc.sleep(2);
 
-        WebElement userButton = driver.findElement(By.cssSelector("div[id='HM_v8'] :nth-child(2)"));
-        userButton.click();
+        WebElement accountCheck = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
+        Assert.assertEquals("Oturum açılamadı.", "Zafer", accountCheck.getText());
+        System.out.println("Oturum başarılı bir şekilde açıldı.");
+
+        WebElement accountName = driver.findElement(By.cssSelector("div[id='HM_v8'] :nth-child(2)"));
+        accountName.click();
         System.out.println("Kullanici butonuna tiklandi.");
         MyFunc.sleep(1);
 
-        WebElement myAccountButton = driver.findElement(By.cssSelector(" li[id='HM_p_v8'] +li+li+li+li>a"));
-        myAccountButton.click();
+        WebElement myAccount = driver.findElement(By.cssSelector(" li[id='HM_p_v8'] +li+li+li+li>a"));
+        myAccount.click();
         System.out.println("Hesabim butonuna tiklandi.");
         MyFunc.sleep(1);
 

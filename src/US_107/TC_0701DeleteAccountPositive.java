@@ -17,28 +17,39 @@ public class TC_0701DeleteAccountPositive extends BaseDriver {
     @Test
     public void TC_0701DeleteAccountPositiveTest() {
         driver.get("https://www.akakce.com/");
-        System.out.println("Akakce.com sitesine gidildi.");
+        Assert.assertEquals("Web sitesine erisim saglanamadi.", "https://www.akakce.com/", driver.getCurrentUrl());
+        System.out.println("Anasayfaya başarılı bir şekilde ulaşıldı.");
         MyFunc.sleep(2);
 
-        WebElement loginButton = driver.findElement(By.cssSelector("div[id='H_rl_v8']>:nth-child(2)"));
+        WebElement login = driver.findElement(By.cssSelector("div[id='H_rl_v8']>:nth-child(2)"));
+        login.click();
+        System.out.println("Login butonuna tiklandi.");
+        MyFunc.sleep(2);
+
+        WebElement loginPageCheck = driver.findElement(By.cssSelector("#FrmLi > label:nth-child(3)"));
+        Assert.assertEquals("Giriş sayfasına erişilemedi.", "Eposta", loginPageCheck.getText());
+        System.out.println("Giriş sayfasına başarılı bir şekilde ulaşıldı.");
+        MyFunc.sleep(2);
+
+        WebElement testEmail = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span>input"));
+        testEmail.sendKeys("akakce128@gmail.com");
+        Assert.assertEquals("E-posta adresi girilemedi.", "akakce128@gmail.com", testEmail.getAttribute("value"));
+        System.out.println("E-posta adresi girildi.");
+        MyFunc.sleep(1);
+
+        WebElement testPassword = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span+label+span>input"));
+        testPassword.sendKeys("Abcd.1234");
+        System.out.println("Sifre girildi.");
+        MyFunc.sleep(1);
+
+        WebElement loginButton = driver.findElement(By.cssSelector("#lfb"));
         loginButton.click();
         System.out.println("Login butonuna tiklandi.");
         MyFunc.sleep(2);
 
-        WebElement email = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span>input"));
-        email.sendKeys("akakce128@gmail.com");
-        System.out.println("Email adresi girildi.");
-        MyFunc.sleep(1);
-
-        WebElement password = driver.findElement(By.cssSelector("input[id='lifrd'] +label+span+label+span>input"));
-        password.sendKeys("Abcd.1234");
-        System.out.println("Sifre girildi.");
-        MyFunc.sleep(1);
-
-        WebElement login = driver.findElement(By.cssSelector("#lfb"));
-        login.click();
-        System.out.println("Login butonuna tiklandi.");
-        MyFunc.sleep(2);
+        WebElement accountCheck = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
+        Assert.assertEquals("Oturum açılamadı.", "Zafer", accountCheck.getText());
+        System.out.println("Oturum başarılı bir şekilde açıldı.");
 
         WebElement accountName = driver.findElement(By.cssSelector("div[id='HM_v8'] :nth-child(2)"));
         accountName.click();

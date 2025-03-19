@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TC_101Account extends BaseDriver {
+public class TC_101AccountRegisterPositive extends BaseDriver {
     /**<pre>
      * --> Bu senaryoda sitede doğru bilgiler girilerek hesap açma senaryosu sağlanmıştır.
      *
@@ -20,7 +20,7 @@ public class TC_101Account extends BaseDriver {
         System.out.println("Akakçe sayfasına girildi");
 
         WebElement signUp = driver.findElement(By.cssSelector("[id='H_st_v8'] + div >:nth-child(1)"));
-        Assert.assertEquals("Yanlış sayfaya girldi", "https://www.akakce.com/", driver.getCurrentUrl());
+        Assert.assertEquals("Yanlış sayfaya girildi", "https://www.akakce.com/", driver.getCurrentUrl());
         System.out.println("Hesap aç görüntülendi");
         signUp.click();
         MyFunc.sleep(2);
@@ -113,8 +113,9 @@ public class TC_101Account extends BaseDriver {
         submit.click();
         System.out.println("Hesap Aç seçildi");
         MyFunc.sleep(2);
-        WebElement account = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
-        Assert.assertEquals("Oturum açılamadı.", "Behlul", account.getText());
+
+        WebElement accountCheck = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
+        Assert.assertEquals("Oturum açılamadı.", "Behlul", accountCheck.getText());
         System.out.println("Hesap başarılı bir şekilde olusturuldu.");
 
         WaitAndClose();

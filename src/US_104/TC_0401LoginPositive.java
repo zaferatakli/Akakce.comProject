@@ -24,6 +24,11 @@ public class TC_0401LoginPositive extends BaseDriver {
         System.out.println("Giriş yap butonuna tıklandı.");
         MyFunc.sleep(2);
 
+        WebElement loginPageCheck = driver.findElement(By.cssSelector("#FrmLi > label:nth-child(3)"));
+        Assert.assertEquals("Giriş sayfasına erişilemedi.", "Eposta", loginPageCheck.getText());
+        System.out.println("Giriş sayfasına başarılı bir şekilde ulaşıldı.");
+        MyFunc.sleep(2);
+
         WebElement testEmail = driver.findElement(By.cssSelector("div[id='L_h_v8'] :nth-child(4) input"));
         testEmail.sendKeys("cigeyab754@erapk.com");
         Assert.assertEquals("E-posta adresi girilemedi.", "cigeyab754@erapk.com", testEmail.getAttribute("value"));
@@ -41,8 +46,8 @@ public class TC_0401LoginPositive extends BaseDriver {
         System.out.println("Giriş yap butonuna tıklandı.");
         MyFunc.sleep(1);
 
-        WebElement account = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
-        Assert.assertEquals("Oturum açılamadı.", "TestName", account.getText());
+        WebElement accountCheck = driver.findElement(By.cssSelector("div[id='HM_v8'] > :nth-child(1) a"));
+        Assert.assertEquals("Oturum açılamadı.", "TestName", accountCheck.getText());
         System.out.println("Oturum başarılı bir şekilde açıldı.");
 
         WaitAndClose();

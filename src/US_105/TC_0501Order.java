@@ -27,9 +27,10 @@ public class TC_0501Order extends BaseDriver {
         System.out.println("GİRİŞ butonuna clicklendi.");
         MyFunc.sleep(2);
 
-        Assert.assertEquals("Yanlış sayfaya gidildi!", "https://www.akakce.com/akakcem/giris/", driver.getCurrentUrl());
-        System.out.println("GİRİŞ sayfası yüklendi.");
-        MyFunc.sleep(1);
+        WebElement loginPageCheck = driver.findElement(By.cssSelector("#FrmLi > label:nth-child(3)"));
+        Assert.assertEquals("Giriş sayfasına erişilemedi.", "Eposta", loginPageCheck.getText());
+        System.out.println("Giriş sayfasına başarılı bir şekilde ulaşıldı.");
+        MyFunc.sleep(2);
 
         WebElement inbox = driver.findElement(By.cssSelector("div[id='L_h_v8'] > form > span > input[id='life']"));
         inbox.sendKeys("fosan56532@bankrau.com");

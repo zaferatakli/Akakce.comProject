@@ -35,27 +35,29 @@ public class TC_102AccountRegisterNegative extends BaseDriver {
         System.out.println("Soyad kısmı boş bırakıldı");
         MyFunc.sleep(1);
 
+        String randomEmail = BaseDriver.generateRandomEmail();
         WebElement email = driver.findElement(By.cssSelector("[id='FrmRnuS'] >:nth-child(9) >input"));
-        email.sendKeys("fadoda7438@dmener.com");
-        Assert.assertEquals("fadoda7438@dmener.com", email.getAttribute("value"));
+        email.sendKeys(randomEmail);
+        Assert.assertEquals(randomEmail, email.getAttribute("value"));
         System.out.println("Email girişi başarılı");
         MyFunc.sleep(1);
 
         WebElement reEmail = driver.findElement(By.cssSelector("[id='FrmRnuS'] >:nth-child(11) >input"));
-        reEmail.sendKeys("fadoda7438@dmener.com");
-        Assert.assertEquals("fadoda7438@dmener.com", reEmail.getAttribute("value"));
+        reEmail.sendKeys(randomEmail);
+        Assert.assertEquals(randomEmail, reEmail.getAttribute("value"));
         System.out.println("Tekrar Email girişi başarılı");
         MyFunc.sleep(1);
 
+        String randomPassword = BaseDriver.generateRandomPassword();
         WebElement password = driver.findElement(By.cssSelector("[id='FrmRnuS'] >:nth-child(13) >input"));
-        password.sendKeys("Bugfathers04");
-        Assert.assertEquals("Bugfathers04", password.getAttribute("value"));
+        password.sendKeys(randomPassword);
+        Assert.assertEquals(randomPassword, password.getAttribute("value"));
         System.out.println("Şifre girişi başarılı");
         MyFunc.sleep(1);
 
         WebElement rePassword = driver.findElement(By.cssSelector("[id='FrmRnuS'] >:nth-child(15) >input"));
-        rePassword.sendKeys("Bugfathers04");
-        Assert.assertEquals("Bugfathers04", rePassword.getAttribute("value"));
+        rePassword.sendKeys(randomPassword);
+        Assert.assertEquals(randomPassword, rePassword.getAttribute("value"));
         System.out.println("Tekrar Şifre girişi başarılı");
         MyFunc.sleep(1);
 

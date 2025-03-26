@@ -104,21 +104,16 @@ As a user, I should be able to delete my account. This ensures that my personal 
 ---
 ## 👨‍💻 Project Team GitHub 
 
-**Zafer Atakli** 
---> https://github.com/zaferatakli   |
-
-**Tugba Kılıç**  --> https://github.com/TugbaKilic33  |
-
-**Yiğit Çam**
--->  https://github.com/Yigit-Cam    |
-
-**Rıfat Batır**
---> https://github.com/rftbtr        |
-
-**Azim Korkmaz**
---> https://github.com/AzimKorkmaz   |
-
-**Nuri Ozturk**
---> https://github.com/NuriOzturk    |
+- **[Zafer Ataklı](https://github.com/zaferatakli)**
+- **[Tugba Kılıç](https://github.com/TugbaKilic33)**
+- **[Yiğit Çam](https://github.com/Yigit-Cam)**
+- **[Rıfat Batır](https://github.com/rftbtr)**
+- **[Azim Korkmaz](https://github.com/AzimKorkmaz)**
+- **[Nuri Öztürk](https://github.com/NuriOzturk)**
+- **[Sibel Öztemel](https://github.com/Sibel52)**
+- **[Mert Can Özdemir](https://github.com/lioncarnes)**
 
 ---
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

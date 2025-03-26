@@ -21,13 +21,16 @@ Akakçe is a price comparison platform that helps users in Turkey find the best 
 **Scenario Description:**  
 As a user, I should be able to create an account on Akakce.com.
 This way, I can have a personalized shopping experience. 
-**Expected Result:** When the user enters valid information, the account creation should be successfully completed.
+
+**Expected Result:** 
+                    When the user enters valid information, the account creation should be successfully completed.
                      If incomplete or incorrect information is entered, the user should receive an appropriate error message, and the account creation should fail.
 
 
 ### **2️⃣ US_102 - Account Verification Check**
 **Scenario Description:**  
-As a user, when I successfully log in to the system, I should be able to see my name in the top right profile section. This will ensure a more secure shopping experience.  
+As a user, when I successfully log in to the system, I should be able to see my name in the top right profile section. This will ensure a more secure shopping experience. 
+
 **Expected Result:** The logged-in user's profile name should be displayed in the top right corner.
 
 ---
@@ -35,6 +38,7 @@ As a user, when I successfully log in to the system, I should be able to see my 
 ### **3️⃣ US_103 - Logout**
 **Scenario Description:**  
 As a user, I should be able to log out of my account on Akakce.com. This will make my shopping more secure.  
+
 **Expected Result:** The user should successfully log out and be redirected to the login screen.
 
 ---
@@ -42,7 +46,8 @@ As a user, I should be able to log out of my account on Akakce.com. This will ma
 ### **4️⃣ US_104 - Login(Negative Scenarios)**
 **Scenario Description:**  
 As a user, I should be able to log into Akakce.com.
-Additionally, if I attempt to log in with an invalid username or password, I should receive an error message and should not be able to access my account.  
+Additionally, if I attempt to log in with an invalid username or password, I should receive an error message and should not be able to access my account.
+
 **Expected Result:** A user who enters a valid username and password should successfully log into their account.
                      If an invalid username or password is entered, the login should fail, and the user should receive an appropriate error message.
                      The user should not be able to access the system with incorrect login credentials.
@@ -52,6 +57,7 @@ Additionally, if I attempt to log in with an invalid username or password, I sho
 ### **5️⃣ US_105 - Order List Check**
 **Scenario Description:**  
 As a user, I should be able to check my order list after logging into my account. This will prevent unauthorized purchases.  
+
 **Expected Result:** The user should be able to view their order list.
 
 ---
@@ -59,13 +65,15 @@ As a user, I should be able to check my order list after logging into my account
 ### **6️⃣ US_106 - Message Box Check**
 **Scenario Description:**  
 As a user, I should be able to check my message inbox after logging into my account. This way, I won’t miss exclusive campaigns and notifications.  
+
 **Expected Result:** The user should be able to access and view messages.
 
 ---
 
 ### **7️⃣ US_107 - Account Deletion**
 **Scenario Description:**  
-As a user, I should be able to delete my account. This ensures that my personal data is protected.  
+As a user, I should be able to delete my account. This ensures that my personal data is protected. 
+
 **Expected Result:** The user should successfully delete their account.
 
 ---
